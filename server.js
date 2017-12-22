@@ -5,6 +5,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var app = express();
+var router = express.Router();
 var PORT = 3000;
 
 // Sets up the Express app to handle data parsing
