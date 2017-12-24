@@ -2,7 +2,7 @@
 // DATA
 // ===============================================================================
 
-var friendArray = [
+var friendsData = [
     {
         'name': 'Myles',
         'photo': 'https://www.buildabear.com/dw/image/v2/BBNG_PRD/on/demandware.static/-/Sites-buildabear-master/default/dw02c1fb63/23342x.jpg?sw=600&sh=600&sm=fit',
@@ -23,4 +23,4 @@ var friendArray = [
 ];
 
 // Note how we export the array. This makes it accessible to other files using require.
-module.exports = friendArray;
+module.exports = friendsData;
