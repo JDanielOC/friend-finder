@@ -21,10 +21,9 @@ module.exports = function(app) {
     // List of friend data.
     // ---------------------------------------------------------------------------
 
-    app.get("/api/friends", function (req, res) {
+    router.get("/api/friends", function (req, res) {
         res.json(friendsData);
     });
-
 
     // API POST Requests
     // Below code handles when a user submits a form and thus submits data to the server.
@@ -49,6 +48,5 @@ module.exports = function(app) {
         };
 
     });
-
    
 };
