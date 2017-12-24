@@ -34,7 +34,7 @@ module.exports = function(app) {
     // Then the server saves the data to the friendsData array)
     // ---------------------------------------------------------------------------
 
-    app.post("/api/friends", function (req, res) {
+    router.post("/api/friends", function (req, res) {
        console.log(req.body);
        var userData = req.body;
         // req.body is available since we're using the body-parser middleware
