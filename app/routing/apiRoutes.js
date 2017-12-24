@@ -6,8 +6,6 @@
 
 var friendsData = require("../data/friends");
 var express = require('express');
-var tableData = require("../data/tableData");
-var waitListData = require("../data/waitinglistData");
 var router = express.Router();
 
 // ===============================================================================
