@@ -21,8 +21,8 @@ module.exports = function(app) {
     // List of friend data.
     // ---------------------------------------------------------------------------
 
-    router.get("/api/friends", function (req, res) {
-        res.json(friendsData);
+    router.get('/api/friends', function (req, res) {
+        res.json(friends);
     });
 
     // API POST Requests
@@ -33,7 +33,7 @@ module.exports = function(app) {
     // Then the server saves the data to the friendsData array)
     // ---------------------------------------------------------------------------
 
-    router.post("/api/friends", function (req, res) {
+    router.post('/api/friends', function (req, res) {
        console.log(req.body);
        var userData = req.body;
         // req.body is available since we're using the body-parser middleware
@@ -47,6 +47,8 @@ module.exports = function(app) {
             }
         };
 
+
+        friendsData.push(req.body);
     });
    
 };
