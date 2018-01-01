@@ -5,14 +5,14 @@
 // ===============================================================================
 var express = require('express');
 var path = require('path');
-var friendsData = require('../data/friends');
+var friends = require('../data/friends');
 var router = express.Router();
 
 // ===============================================================================
 // ROUTING
 // ===============================================================================
 
-module.exports = function(app) {
+module.exports = function (router) {
 
     // API GET Requests
     // Below code handles when users "visit" a page.
@@ -34,21 +34,21 @@ module.exports = function(app) {
     // ---------------------------------------------------------------------------
 
     router.post('/api/friends', function (req, res) {
-       console.log(req.body);
-       var userData = req.body;
+        console.log(req.body);
+        var userData = req.body;
         // req.body is available since we're using the body-parser middleware
         // loop through friends data array and compare surveyResults 
         // with each friend data entry
 
-        for(var i=0; i < friendsData.length; i++) {
+        for (var i = 0; i < friendsData.length; i++) {
             // compare user survey data to current friend survey data
-            for(var j=0; j < friendsData[i].surveyResults.length; j++) {
-                
+            for (var j = 0; j < friendsData[i].surveyResults.length; j++) {
+
             }
         };
 
 
         friendsData.push(req.body);
     });
-   
+
 };
